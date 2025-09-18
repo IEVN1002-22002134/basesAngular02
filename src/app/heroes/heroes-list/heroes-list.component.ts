@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Heroes} from '../heroes';
 
 @Component({
   selector: 'app-heroes-list', //nombre del selector con el que mandare a llamarlo
@@ -8,9 +9,16 @@ import { Component } from '@angular/core';
 })
 export class HeroesListComponent { //nombre de la clase este se invoca en el add mosules
 
-  heroes: any[] = [
+  listFilter:string='';
+  muestraImg: boolean = true;
+  showImage() {
+    this.muestraImg = !this.muestraImg;
+  }
+
+
+  heroes:Heroes[] = [
     {
-      "imagen": "https://dragonball-api.com/characters/goku_normal.webp",
+      imagen: "https://dragonball-api.com/characters/goku_normal.webp",
       nombre: "Goku",
       descripcion: "Kakaroto",
       race: "Saiyan",
@@ -18,21 +26,21 @@ export class HeroesListComponent { //nombre de la clase este se invoca en el add
     },
 
     {
-      "imagen": "https://dragonball-api.com/characters/picolo_normal.webp",
+      imagen: "https://dragonball-api.com/characters/picolo_normal.webp",
       nombre: "Piccolo",
       descripcion: "Peter parker",
       race: "Saiyan",
       ki: 20000
     },
     {
-      "imagen": "https://dragonball-api.com/characters/vegeta_normal.webp",
+      imagen: "https://dragonball-api.com/characters/vegeta_normal.webp",
       nombre: "Vegeta",
       descripcion: "parker",
       race: "Saiyan",
       ki: 570000
     },
     {
-      "imagen": "https://dragonball-api.com/characters/bulma.webp",
+      imagen: "https://dragonball-api.com/characters/bulma.webp",
       nombre: "Bulma",
       descripcion: "parker",
       race: "Human",
