@@ -11,7 +11,7 @@ export class OperasBasComponent {
   num1:string="";
   num2:string="";
   res:string="";
-  operacion:string="";
+  opera:string="";
 
 
   sumar():void{
@@ -27,13 +27,13 @@ export class OperasBasComponent {
     this.res=(parseInt(this.num1) / parseInt(this.num2)).toString();
   }
   operaciones():void{
-    if (this.operacion=="sumar"){
+    if (this.opera=="sumar"){
       this.sumar();
-    }else if(this.operacion=="resta"){
+    }else if(this.opera=="restar"){
         this.restar();
-    }else if(this.operacion=="multiplicacion"){
+    }else if(this.opera=="multiplicacion"){
       this.multiplicar();
-    }else{
+    }else if(this.opera=="division"){
       this.dividir();
     }
   }
