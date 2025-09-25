@@ -1,0 +1,75 @@
+
+<body>
+  <div  class="container mt-4">
+  <h1 class="mb-4 text-center">Cinépolis</h1>
+
+  <div class="row">
+
+
+    <!-- Entradas -->
+
+    <div class="col-md-6">
+      <h3>Entradas</h3>
+
+      <div class="form-group row mb-2">
+        <label for="nombre" class="col-sm-3 col-form-label">Nombre:</label>
+        <div class="col-sm-7">
+          <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="nombre">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label for="personas" class="col-sm-3 col-form-label">Compradores:</label>
+        <div class="col-sm-7">
+          <input type="number" id="personas" name="personas" class="form-control" [(ngModel)]="personas">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label for="boletos" class="col-sm-3 col-form-label">Boletos:</label>
+        <div class="col-sm-7">
+          <input type="number" id="boletos" name="boletos" class="form-control" [(ngModel)]="boletos">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-sm-5 col-form-label">Tarjeta Cinéco:</label>
+        <div class="col-sm-7">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tarjeta" value="si" [(ngModel)]="tarjeta" id="tarjetaSi">
+            <label class="form-check-label" for="tarjetaSi">Sí</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tarjeta" value="no" [(ngModel)]="tarjeta" id="tarjetaNo">
+            <label class="form-check-label" for="tarjetaNo">No</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Salidas -->
+    <div class="col-md-6">
+      <h3>Salidas</h3>
+      <div class="form-group row mb-2">
+        <label class="col-sm-5 col-form-label">Valor a pagar:</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" [value]="total">
+
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <p *ngIf="mensaje" class="mt-2">{{ mensaje }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acciones -->
+  <div class="text-center mt-4">
+    <h3>Acciones</h3>
+    <button type="button" class="btn btn-secondary me-5" (click)="calcular()">Procesar</button>
+    <button type="button" class="btn btn-danger" (click)="salir()">Salir</button>
+  </div>
+</div>
+</body>
