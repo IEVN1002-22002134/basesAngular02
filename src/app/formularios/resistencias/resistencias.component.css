@@ -1,0 +1,75 @@
+.banda-container {
+  display: flex;
+  gap: 20px;
+}
+
+.banda-section {
+   border: 1px solid #c1bfbf;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #d2d1d1;
+}
+
+.banda-section > label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banda-colores {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-item {
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+}
+
+.color-item.tolerancia {
+  background: gray;
+  color: black;
+}
+.color-item {
+  display: inline-block;
+  width: 90px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+}
+
+.color-item[style*="white"] {
+  background-color: #eee;
+  color: black;
+}
+
+.color-item.tolerancia {
+  background: gray;
+  color: black;
+}
+
+table {
+  border: 1px solid #000;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 6px;
+}
+
